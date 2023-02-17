@@ -23,10 +23,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+      
     - run: |
           node --version
           npm --version
           npm i
           npm install -g @angular/cli
           ng v
-          npm run build -- --prod
+      uses: ng config -g cli.warnings.versionMismatch false
+    - run:   npm run build -- --prod
