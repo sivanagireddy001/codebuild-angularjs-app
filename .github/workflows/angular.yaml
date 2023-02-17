@@ -31,4 +31,4 @@ jobs:
           npm install -g @angular/cli
           ng v
           ng config -g cli.warnings.versionMismatch false
-          npm run build -- --prod
+          ng build -c production
