@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+      
+    commands:
+      - npm install
+      - npm install -g @angular/cli
+      - npm install -g @angular-devkit/build-angular
+
+  build:
+    commands:
+      - ng build
+
+artifacts:
+  files:
+    - 'dist/*'
+  discard-paths: yes
+  base-directory: '.'
