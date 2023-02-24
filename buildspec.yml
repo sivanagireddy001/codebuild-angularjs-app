@@ -7,7 +7,8 @@ phases:
   
   pre_build:   
     commands:
-      - npm install
+      - echo installing source npm depedencies
+      - npm i -g npm-upgrade
       - npm install -g @angular/cli
 
   build:
